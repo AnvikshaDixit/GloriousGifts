@@ -189,12 +189,12 @@ html {
 </div>
  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">Home</a>
+  <a href="index">Home</a>
   <a href="#">About Us</a>
   <a href="#">Products</a>
   <a href="#">Contact Us</a>
-  <a href="#">Login</a>
-  <a href="#">Sign Up</a>
+  <a href="loginpage">Login</a>
+  <a href="signup">Sign Up</a>
   </div>
 
 <!-- Remeber to put all the content you want on top of the slider below the slider code -->
