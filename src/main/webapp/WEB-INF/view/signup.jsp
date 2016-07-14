@@ -25,21 +25,14 @@ input
     border:solid 1px black;
     padding:5px;
 }
- .jumbotron1{
-    margin-bottom: 0px;
-    background-image: url(resources/img/b2.jpg);
-    background-position: 0% 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: black;
-    text-shadow: black 0.3em 0.3em 0.3em;
-}  
-
-
+ label
+ {
+ color:#ffffff;
+ }
 body {text-align:center;
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
-     background: url(resources/img/b3.jpg) no-repeat center center fixed; 
+     background: url(resources/img/b1.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -66,12 +59,11 @@ input {
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
-    color: black;
-    text-shadow: white 0.3em 0.3em 0.3em;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
     margin:5px; 
     padding:0 px;
-    color:white;
-     background-color: rgba(5,4,2,0.5);
+    background-color: rgba(5,4,2,0.5);
      }
     
 .sidenav {
@@ -125,15 +117,25 @@ input {
 <body >
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="index">Home</a>
-  <a href="#">About Us</a>
-  <a href="#">Products</a>
-  <a href="#">Contact Us</a>
-  <a href="loginpage">Login</a>
-  <a href="signup">Sign Up</a>
+  <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
+  <a href="#">About Us<span class="glyphicon glyphicon-pencil" /></a>
+  <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
+  <a href="#">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
+  <br>
+  
+  <br>
+  
+  <br>
+ 
+  <a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a>
+  <a href="signup">Sign Up<span class="glyphicon glyphicon-user" /></a>
+  
+ <br><br>
   </div>
+
+
   <div class="title " id="main">
- <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" class="jumbotron"><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()"> open</span>  </b></h1>
+ <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" class="jumbotron"><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"></span>  </b></h1>
             
 <div class="row">
 <div class="col-sm-3" style="backgroung-color:grey">
@@ -141,19 +143,19 @@ input {
 </div>
 <div class="col-sm-6 " style="backgroung-color:grey" >
  <div class="jumbotron">
-<h2 style="font-family:Imprint MT Shadow ;text-align:center"><b>PLEASE SIGN UP</b> </h2><br> <br>
+<h2 style="font-family:Imprint MT Shadow ;text-align:center"><b><span class="glyphicon glyphicon-user" />PLEASE SIGN UP</b> </h2><br> <br>
 <h5 style="font-family:Mistral,text-align:center"><b>PLEASE ENTER THE USER DETAILS</b></h5>
 
 <form:form method="POST" action="Uservalues" modelAttribute="User">
    <table cellspacing="10" align="center" style="font-family:Comic Sans MS">
     <tr>
-        <td><form:label path="username"  type="text" style=" font-family:Comic Sans MS;">NAME</form:label></td>
-        <td><form:input path="username" STYLE="color: #ffffff; font-family:Comic Sans MS;"/> <br><br></td>
+        <td><form:label path="username"  type="text" style=" font-family:Comic Sans MS;text-color:white">NAME</form:label></td>
+        <td><form:input path="username" STYLE="color: #000000; font-family:Comic Sans MS;"/> <br><br></td>
         <td><form:errors path="username" class="err" /></td>
     </tr>
     <tr>
         <td><form:label path="email" style=" font-family:Comic Sans MS;">EMAIL ID</form:label></td>
-        <td><form:input path="email"   STYLE="color: #ffffff; font-family:Comic Sans MS; " /><br><br></td>
+        <td><form:input path="email"   STYLE="color: #000000; font-family:Comic Sans MS; " /><br><br></td>
         <td><form:errors path="email" class="err" /></td>
     </tr>
      <tr>

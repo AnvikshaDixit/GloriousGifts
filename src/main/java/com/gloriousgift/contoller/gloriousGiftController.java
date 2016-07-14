@@ -109,13 +109,14 @@ public class gloriousGiftController
 	
 	
 	@RequestMapping(value = "/loginpage", method = RequestMethod.GET)
-	public ModelAndView logininfo(@RequestParam(value = "error", required = false) String error) {
-	   
-		
+	public ModelAndView logininfo(@RequestParam(value = "error", required = false) String error)
+	
+	{
 		ModelAndView model = new ModelAndView();
-		if (error != null) {
-			model.addObject("error", "Invalid username and password!");
-		}
+		        if (error != null)
+		        {
+			         model.addObject("error", "Invalid username and password!");
+		        }
 		model.setViewName("login");
 
 		return model;

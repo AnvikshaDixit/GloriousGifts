@@ -17,26 +17,18 @@
 <style>
 
 @charset "utf-8";
-/* CSS Document */
-
-/* ---------- FONTAWESOME ---------- */
-/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
-/* ---------- http://weloveiconfonts.com/ ---------- */
 
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
-/* ---------- ERIC MEYER'S RESET CSS ---------- */
-/* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
 
 @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
 
-/* ---------- FONTAWESOME ---------- */
 
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
 
-/* ---------- GENERAL ---------- */
+
 
 body {
 	background-color: #C0C0C0;
@@ -212,18 +204,27 @@ padding: 15px;
 
 <body>
 
-<div id="mySidenav" class="sidenav">
+ <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="index">Home</a>
-  <a href="#">About Us</a>
-  <a href="#">Products</a>
-  <a href="#">Contact Us</a>
-  <a href="loginpage">Login</a>
-  <a href="signup">Sign Up</a>
+  <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
+  <a href="#">About Us<span class="glyphicon glyphicon-pencil" /></a>
+  <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
+  <a href="#">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
+  <br>
+  
+  <br>
+  
+  <br>
+ 
+  <a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a>
+  <a href="signup">Sign Up<span class="glyphicon glyphicon-user" /></a>
+  
+ <br><br>
   </div>
+
 <div class="title" id="main">
 <div class="jumbotron">
- <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" ><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()"> open</span>  </b></h1>
+ <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" ><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  </b></h1>
  </div>
                       
                       <br>
@@ -231,30 +232,31 @@ padding: 15px;
 	<div id="login">
 
 		<h2><span class="fontawesome-lock"></span>Sign In</h2>
-
+<fieldset>
 		<section class="login">
         <form  action="login" method="POST">
-        	<fieldset>
+        	
         	   <c:if test="${not empty error}">
-         <div class="error">${error}</div>
-          </c:if>
+               <div class="error">${error}</div>
+               </c:if>
 
-				<p><label path="username"for="name">E-mail address</label></p>
-				<p><input  path="username" type="email" id="email"  placeholder="Username" ></p> 
+				<p><label  path="username" name="username"  type="text"  placeholder="Username" >Username</label></p>
+				<p><input   path="username" name="username"  type="text"  placeholder="Username"></p> 
 
-				<p><label path="password"for="password">Password</label></p>
-				<p><input path="password"type="password" id="password"  placeholder="Password"  ></p> 
+				<p><label path="password" name="password" type="password"  placeholder="Password">Password</label></p>
+				<p><input path="password" name="password" type="password"  placeholder="Password" ></p> 
                   
 				
-				<p><input type="submit" value="Sign In"></p>
+				<p><input type="submit" value="Log In"></p>
 
 				
 
 
-			</fieldset>
+			
 
 		</form>
 </section>
+</fieldset>
 	</div> <!-- end login -->
 </div>
 

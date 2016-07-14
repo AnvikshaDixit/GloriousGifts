@@ -17,6 +17,10 @@ html {
     position: relative;
     min-height: 100%;
 }
+label
+ {
+ color:#ffffff;
+ }
 .carousel-fade .carousel-inner .item {
     opacity: 0;
     transition-property: opacity;
@@ -116,7 +120,6 @@ html {
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
-    color: black;
     text-shadow: black 0.3em 0.3em 0.3em;
     margin:5px; 
     padding:0 px;
@@ -189,18 +192,26 @@ html {
 </div>
  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="index">Home</a>
-  <a href="#">About Us</a>
-  <a href="#">Products</a>
-  <a href="#">Contact Us</a>
-  <a href="loginpage">Login</a>
-  <a href="signup">Sign Up</a>
+  <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
+  <a href="#">About Us<span class="glyphicon glyphicon-pencil" /></a>
+  <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
+  <a href="#">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
+  <br>
+   <a href="product">Product Entry<span class="glyphicon glyphicon-hdd" /></a>
+  <br>
+  
+  <br>
+ 
+  <a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a>
+  <a href="signup">Sign Up<span class="glyphicon glyphicon-user" /></a>
+  
+ <br><br>
   </div>
 
 <!-- Remeber to put all the content you want on top of the slider below the slider code -->
 
 <div class="title" id="main">
- <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" class="jumbotron"><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()"> open</span>  </b></h1>
+ <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" class="jumbotron"><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  </b></h1>
                       <br>
                       <br>
                       <br>
@@ -213,8 +224,8 @@ html {
                             <div class="col-sm-5">
                              <div class="jumbotron" style="align:center">
                            <div class="slider-text-bottom slider-text-middle5 text-left no-padding">
-                                <H3 class="slider-title-big5 white-text margin-eleven" style="font-family:Lucida Handwriting;text-align:center"><b>Welcome to Glorious Gifts</b></H3>
-                                <p style="text-align:center"> If you want to Surprise your Family and Friends with Amazing and Astonishing Gifts...then You Are on the right Place...<br>
+                                <H2 class="slider-title-big5 white-text margin-eleven" style="font-family:Lucida Handwriting;text-align:center"><b>Welcome to Glorious Gifts</b></H2><br><br>
+                                <p style="text-align:center;font-family:Comic Sans MS"> If you want to Surprise your Family and Friends with Amazing and Astonishing Gifts...then You Are on the right Place...<br>
                                 Glorious Gifts is a site where you can find all sort of gifts and cakes that you want to use to surprise your near and dear ones...
 
                                 All the products have some or the other unique qualities which would make it look different from other gift....
