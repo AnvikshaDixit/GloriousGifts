@@ -129,7 +129,7 @@ body {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
-  <a href="#">About Us<span class="glyphicon glyphicon-pencil" /></a>
+  <a href=Aboutus>About Us<span class="glyphicon glyphicon-pencil" /></a>
   <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
   <a href="#">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
   <br>
@@ -154,7 +154,7 @@ body {
                       <br>
                       <br>
                       <br>
-<h4>Search : <input type="text" placeholder="SearchText" ng-model="Searchtext" ng-init="Searchtext='Red Roses'" /></h4>
+<h4>Search : <input type="text" placeholder="SearchText" ng-model="Searchtext" ng-init="Searchtext='Roses'" /></h4>
 
 	
    <br> <br>

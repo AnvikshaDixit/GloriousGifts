@@ -143,7 +143,7 @@ label
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s
@@ -193,7 +193,7 @@ label
  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
-  <a href="#">About Us<span class="glyphicon glyphicon-pencil" /></a>
+  <a href="Aboutus">About Us<span class="glyphicon glyphicon-pencil" /></a>
   <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
   <a href="#">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
   <br>
@@ -211,15 +211,24 @@ label
 <!-- Remeber to put all the content you want on top of the slider below the slider code -->
 
 <div class="title" id="main">
- <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" class="jumbotron"><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  </b></h1>
+
+
+<div class="row jumbotron">
+ <div class=col-sm-6 >
+	<h3 style="text-align:left;font-size:40px; font-family:Segoe Script;color:white;"><b> Glorious Gifts </b></h3>
+                      </div>
+                      <div class="col-sm-5">
+                      <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  
+                       </div>
+   </div>                    
                       <br>
                       <br>
                       <br>
  
                             <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-2">
                             </div>
-                             <div class="col-sm-4">
+                             <div class="col-sm-3">
                             </div>
                             <div class="col-sm-5">
                              <div class="jumbotron" style="align:center">

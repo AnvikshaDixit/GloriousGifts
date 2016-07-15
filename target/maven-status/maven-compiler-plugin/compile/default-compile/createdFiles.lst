@@ -1,0 +1,16 @@
+com\gloriousgift\ProductModel\ProductService.class
+com\gloriousgift\ProductModel\ProductDAO.class
+com\gloriousgift\RoleSecurity\RoleSecurityDAO.class
+com\gloriousgift\UserModel\UserDAO.class
+com\gloriousgift\UserModel\UserDAOImpl.class
+com\gloriousgift\ProductModel\ProductDAOImpl.class
+com\gloriousgift\RoleSecurity\RoleSecurity.class
+com\gloriousgift\contoller\gloriousGiftController.class
+com\gloriousgift\RoleSecurity\RoleSecurityService.class
+com\gloriousgift\RoleSecurity\RoleSecurityDAOImpl.class
+com\gloriousgift\UserModel\User.class
+com\gloriousgift\ProductModel\ProductServiceImpl.class
+com\gloriousgift\ProductModel\Product.class
+com\gloriousgift\RoleSecurity\RoleSecurityServiceImpl.class
+com\gloriousgift\UserModel\UserService.class
+com\gloriousgift\UserModel\UserServiceImpl.class

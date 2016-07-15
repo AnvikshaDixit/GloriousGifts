@@ -199,10 +199,10 @@ public class gloriousGiftController
 					
 			
 		  }
-		@RequestMapping("/aboutus")
+		@RequestMapping("/Aboutus")
 		public String aboutus()
 		{
-			return "aboutus";
+			return "Aboutus";
 					
 			
 		  }

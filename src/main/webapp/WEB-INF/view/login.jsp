@@ -156,7 +156,7 @@ body {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s
@@ -207,7 +207,7 @@ padding: 15px;
  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
-  <a href="#">About Us<span class="glyphicon glyphicon-pencil" /></a>
+  <a href=Aboutus>About Us<span class="glyphicon glyphicon-pencil" /></a>
   <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
   <a href="#">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
   <br>

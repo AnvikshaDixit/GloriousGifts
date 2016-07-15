@@ -1,4 +1,4 @@
-package com.gloriousgift.ProductModel;
+ package com.gloriousgift.ProductModel;
 
 import java.io.Serializable;
 
