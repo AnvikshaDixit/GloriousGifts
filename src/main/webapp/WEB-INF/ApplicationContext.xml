@@ -41,6 +41,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 				<value>com.gloriousgift.UserModel</value> 
 				<value>com.gloriousgift.ProductModel</value>
 				<value>com.gloriousgift.RoleSecurity</value>
+				<value>com.gloriousgift.AddressModel</value>
 			</list>
 		</property>
 	</bean>	

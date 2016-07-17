@@ -1,7 +1,9 @@
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\RoleSecurity\RoleSecurity.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\UserModel\UserDAOImpl.java
+D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\AddressModel\AddressServiceImpl.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\RoleSecurity\RoleSecurityDAOImpl.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\UserModel\UserDAO.java
+D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\AddressModel\AddressService.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\ProductModel\ProductServiceImpl.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\UserModel\User.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\ProductModel\Product.java
@@ -10,7 +12,10 @@ D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\ProductModel\ProductDAOIm
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\contoller\gloriousGiftController.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\UserModel\UserService.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\RoleSecurity\RoleSecurityDAO.java
+D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\AddressModel\AddressDAO.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\RoleSecurity\RoleSecurityService.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\RoleSecurity\RoleSecurityServiceImpl.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\UserModel\UserServiceImpl.java
+D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\AddressModel\AddressDAOImpl.java
+D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\AddressModel\Address.java
 D:\walkin\gloriousgifts\src\main\java\com\gloriousgift\ProductModel\ProductService.java

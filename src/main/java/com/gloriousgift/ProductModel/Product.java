@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+
+import org.springframework.web.multipart.MultipartFile;
 
 
 @Entity
@@ -16,11 +19,13 @@ public class Product implements Serializable
 	private String ProductName;
 	private long Price;
 	private String Manufacturer;
-	private String image;
-	public String getImage() {
+	@Transient
+	private MultipartFile image;
+	
+	public MultipartFile getImage() {
 		return image;
 	}
-	public void setImage(String image) {
+	public void setImage(MultipartFile image) {
 		this.image = image;
 	}
 	public long getPrice() {

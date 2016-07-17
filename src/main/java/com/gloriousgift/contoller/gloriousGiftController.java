@@ -1,8 +1,13 @@
 package com.gloriousgift.contoller;
 
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.List;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.gloriousgift.AddressModel.Address;
+import com.gloriousgift.AddressModel.AddressService;
 import com.gloriousgift.ProductModel.Product;
 import com.gloriousgift.ProductModel.ProductService;
 import com.gloriousgift.RoleSecurity.RoleSecurityService;
@@ -32,6 +39,10 @@ public class gloriousGiftController
 	
 	@Autowired
 	RoleSecurityService rss;
+	
+	@Autowired
+	AddressService as;
+	
 	
 	@RequestMapping("/")
 	public String homewalkin()
@@ -95,17 +106,59 @@ public class gloriousGiftController
 	
 	
 	@RequestMapping(value = "/Productvalues", method = RequestMethod.POST)
-	   public ModelAndView Productvalues(@ModelAttribute("Product")Product p) 
-	   {
-		  ps.insert(p);
-	     
-		  ModelAndView mav = new ModelAndView("product");
-	      
-		  mav.addObject("Product",new Product());
-	      
-		  return mav;
-	   }
+	   public ModelAndView Productvalues(@ModelAttribute("Product")Product p,HttpServletRequest request, BindingResult result) 
 	
+	   {String filename=null;
+
+	
+	ServletContext context= request.getServletContext();
+
+	String path = context.getRealPath("./resources/"+p.getProductID()+".jpg");
+
+	System.out.println("Path = "+path);
+
+	System.out.println("File name = "+p.getImage().getOriginalFilename());
+
+	File f=new File(path);
+    
+	
+	
+	if(!p.getImage().isEmpty())
+
+	{
+
+	try
+
+	{
+
+	//filename=p.getImage().getOriginalFilename();
+
+	byte[] bytes=p.getImage().getBytes();
+
+	BufferedOutputStream bs=new BufferedOutputStream (new FileOutputStream(f));
+
+	bs.write(bytes);
+
+	bs.close();
+
+	System.out.println("Image uploaded");
+	}
+	catch(Exception ex)
+
+	{
+		System.out.println(ex.getMessage());
+	}
+	
+	}
+	
+	ps.insert(p);
+	  	     
+	  ModelAndView mav = new ModelAndView("product");
+      
+ 	  mav.addObject("Product",new Product());
+      
+	  return mav;}
+   	
 	
 	
 	@RequestMapping(value = "/loginpage", method = RequestMethod.GET)
@@ -184,7 +237,41 @@ public class gloriousGiftController
 
   
 	}
+	
+	
+	
 
+	/*@RequestMapping("/Details")
+	public ModelAndView Addressdetails()
+	{ 
+		List<Product> list = as.list();
+		
+		String temp = "[";
+		
+		for( Address a:list )
+		{
+			temp += a.toString().replaceAll("\\\\", "/") + ",";
+		}
+		
+		if( temp.length() > 1 )
+			temp = temp.substring(0, temp.length()-1);
+		
+		temp+= "]";
+		
+		System.out.println(temp);
+		 
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("JSONdata", temp);
+		
+		return mav;
+
+  
+	}
+*/
+	
+	
+	
 		@RequestMapping("/cartimg")
 		public String  cart()
 		{
@@ -192,6 +279,39 @@ public class gloriousGiftController
   return "cartimg";
 
 	}
+		
+	/*	==========================================================
+		*/
+		@RequestMapping(value = "/Addressdetails", method = RequestMethod.GET)
+		   public ModelAndView Addressinfo()
+		   {
+			  ModelAndView mav = new ModelAndView("Addressdetails");
+		     mav.addObject("Address",new Address());
+		      return mav;
+		   }
+		
+		
+		
+		
+		@RequestMapping(value = "/Addressvalues", method = RequestMethod.POST)
+		   public ModelAndView Addressvalues (@ModelAttribute("Address") Address a) 
+		   {
+			
+					  
+				 as.insert(a);
+		    		  
+			     ModelAndView mav = new ModelAndView("Details");
+		      
+			     mav.addObject("Address",new Address());
+		      
+			     return mav;
+			 
+		   }
+		
+
+		
+		
+		
 		@RequestMapping("/index")
 		public String home()
 		{

@@ -6,6 +6,7 @@
  <link rel="stylesheet" href="resources/css/bootstrap.min.css">
 <script src="resources/js/jquery.min.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
+<jsp:include page="/WEB-INF/view/head.jsp"/>
 <head>
 
 	<meta charset="utf-8">
@@ -121,67 +122,8 @@ body {
 #login fieldset input[type="submit"]:hover {
 	background-color: #28ad63;
 }
-
-.jumbotron {
-    margin-bottom: 0px;
-     
-    background-position: 0% 25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: black;
-    text-shadow: black 0.3em 0.3em 0.3em;
-    margin:5px; 
-    padding:0 px;
-    color:white;
-     background-color: rgba(5,4,2,0.5);
-     }
-
 body {
     font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px !important;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
 }
 
 .error
@@ -194,39 +136,20 @@ padding: 15px;
 	background-color: #f2dede;
 	border-color: #ebccd1;
 }
-
-
-
-
-
 </style>
 </head>
 
 <body>
 
- <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
-  <a href=Aboutus>About Us<span class="glyphicon glyphicon-pencil" /></a>
-  <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
-  <a href="#">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
-  <br>
-  
-  <br>
-  
-  <br>
- 
-  <a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a>
-  <a href="signup">Sign Up<span class="glyphicon glyphicon-user" /></a>
-  
- <br><br>
-  </div>
-
 <div class="title" id="main">
-<div class="jumbotron">
- <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" ><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  </b></h1>
- </div>
-                      
+<div class="row jumbotron">
+ <div class=col-sm-6 >
+	<h3 style="text-align:left;font-size:40px; font-family:Segoe Script;color:white;"><b> Glorious Gifts </b></h3>
+                      </div>
+                      <div class="col-sm-5">
+                      <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  
+                       </div>
+   </div>                          
                       <br>
 
 	<div id="login">
@@ -259,23 +182,6 @@ padding: 15px;
 </fieldset>
 	</div> <!-- end login -->
 </div>
-
-
-
-
-     
 </body>	
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
-}
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-   document.body.style.backgroundColor = "none";
-}
-</script>
 </html>
