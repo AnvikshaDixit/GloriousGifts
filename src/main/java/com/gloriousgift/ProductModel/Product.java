@@ -19,15 +19,26 @@ public class Product implements Serializable
 	private String ProductName;
 	private long Price;
 	private String Manufacturer;
-	@Transient
-	private MultipartFile image;
+	private String image;
 	
-	public MultipartFile getImage() {
-		return image;
+	@Transient
+	private MultipartFile file;
+	
+	
+	public MultipartFile getFile() {
+		return file;
 	}
-	public void setImage(MultipartFile image) {
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
+	public void setImage(String image) {
 		this.image = image;
 	}
+	
+	public String getImage() {
+		return image;
+	}
+	
 	public long getPrice() {
 		return Price;
 	}

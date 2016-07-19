@@ -113,7 +113,7 @@
  
  <li> <a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a></li>
  <li> <a href="signup">Sign Up<span class="glyphicon glyphicon-user" /></a></li>
-  <li> <a href="signup">ADMIN<span class="glyphicon glyphicon-user" /></a></li>
+  <li> <a href="Admin">ADMIN<span class="glyphicon glyphicon-user" /></a></li>
   </ul>
  <br><br>
   </div>	

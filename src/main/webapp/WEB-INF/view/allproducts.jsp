@@ -87,23 +87,23 @@ th, td {
 	
    <br> <br>
     
-    <table border="6" text-align="center" class="table table-bordered " style=" border: 3px solid black;" > 
-      <thead style=" border: 3px solid black;">
-      <tr style=" border: 3px solid black;">
+    <table border="6" text-align="center" class="table table-bordered " style=" border: 1px solid black;" > 
+      <thead style=" border: 1px solid black;">
+      <tr style=" border: 1px solid black;">
       
-      <th style=" border: 3px solid black; background-color:#C70039  ;"><h3><b> Product Name </b></h3></th>
-      <th style=" border: 3px solid black; background-color: #C70039  ;"><h3><b>Price</b></h3>  </th>
-      <th style=" border: 3px solid black;  background-color: #C70039  ;"><h3><b>Product Manufacturer</b></h3> </th>
-      <th style=" border: 3px solid black; background-color: #C70039  ;"><h3><b> Product image </b></h3></th>
+      <th style=" border: 1px solid black; background-color:#C70039  ;"><h3><b> Product Name </b></h3></th>
+      <th style=" border: 1px solid black; background-color: #C70039  ;"><h3><b>Price</b></h3>  </th>
+      <th style=" border: 1px solid black;  background-color: #C70039  ;"><h3><b>Product Manufacturer</b></h3> </th>
+      <th style=" border: 1px solid black; background-color: #C70039  ;"><h3><b> Product image </b></h3></th>
       
             </tr>
       </thead>
       <tbody>
-      <tr  ng-repeat="product in products | filter:Searchtext " style=" border: 3px solid black;">
-      <td style=" border: 3px solid black;"><b>{{product.ProductName}}</b></td>
-      <td style=" border: 3px solid black;"><b>{{product.Price}}</b></td>
-        <td style=" border: 3px solid black;"><b>{{product.Manufacturer}}</b></td>
-      <td style=" border: 3px solid black;"><img data-ng-src="{{product.Image}}" class="img-responsive img-rounded" width="200" height="200" /></td>
+      <tr  ng-repeat="product in products | filter:Searchtext " style=" border: 1px solid black;">
+      <td style=" border: 1px solid black;"><b>{{product.ProductName}}</b></td>
+      <td style=" border: 1px solid black;"><b>{{product.Price}}</b></td>
+        <td style=" border: 1px solid black;"><b>{{product.Manufacturer}}</b></td>
+      <td style=" border: 1px solid black;"><img data-ng-src="{{product.Image}}" class="img-responsive img-rounded" width="200" height="200" /></td>
 
     </tr>
   </tbody>

@@ -15,6 +15,16 @@
 <title>Entry of Product Details</title>
 
 <style>
+input[type=file]
+{
+-moz-border-radius: 0;
+ border-radius: 0;
+    border:none;
+    padding:5px;
+
+}
+
+
 input
 {
   -moz-border-radius: 15px;
@@ -35,7 +45,16 @@ input
 </head>
 <body background="resources/img/b1.jpg"  >
 <div class="title" id="main">
- <h1 style="text-align:left;font-size:50px; font-family:Segoe Script;color:white;" class="jumbotron"><b> Glorious Gifts <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  </b></h1>
+ 
+<div class="row jumbotron">
+ <div class=col-sm-6 >
+	<h3 style="text-align:left;font-size:40px; font-family:Segoe Script;color:white;"><b> Glorious Gifts </b></h3>
+                      </div>
+                      <div class="col-sm-5">
+                      <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  
+                       </div>
+   </div>                    
+                   
                       <br>
                       <br>
                       <br>
@@ -62,7 +81,8 @@ input
     
     <tr>
        <td><form:label path="image" style=" font-family:Comic Sans MS;">IMAGE URL:</form:label></td>
-        <td><form:input type="file" path="image" STYLE="color: #000000; font-family:Comic Sans MS; " /><br><br></td>
+       <td><form:input type="file" path="file" STYLE="color: #ffffff; font-family:Comic Sans MS; " /><br><br></td>
+       
     </tr>
     
     <tr>

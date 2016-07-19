@@ -68,9 +68,9 @@
                       <br>
                       <br>
 
+ 
   <div class="row">
-  
-   <div class="col-sm-6">
+    <div class="col-sm-6">
    <div class="col-sm-12">
  <h1 style="font-family:Segoe Script">Chumbak-Handmade Doll</h1>
     </div>
@@ -113,8 +113,7 @@
  </div>
  
  <div class="col-md-3">
-  <span class="monospaced">Write a Review</span>
- </div>
+  </div>
 </div><!-- end row -->
 </div>
 <div class="container">

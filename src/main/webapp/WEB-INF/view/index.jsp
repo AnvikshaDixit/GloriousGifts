@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!Doctype>
 <html>
 <meta charset="utf-8">
@@ -6,9 +7,7 @@
 <script src="resources/js/jquery.min.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
 <jsp:include page="/WEB-INF/view/head.jsp"/>
-<head>
-
-
+ <head>
 
 
 <style>
@@ -117,8 +116,28 @@ label
   color: #FFF;
 }
 
-</style>
+input[type=text] {
+   box-align:right;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('Searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
 
+input[type=text]:focus {
+    width: 100%;
+}
+
+
+</style>
 
 
 <div class="carousel slide carousel-fade" data-ride="carousel">
@@ -149,8 +168,23 @@ label
                       </div>
                       <div class="col-sm-5">
                       <span style="float:right;font-size:30px;cursor:pointer" onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"> </span>  
+                      <br>
+                      <br>
+                      
+                      
+                      <%--  <a href="<c:url value="/logout"/>"style="float:right;font-size:20px;"><u>Logout</u></a> --%>
                        </div>
    </div>                    
+                      <br>
+ 
+  <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo" style="float: right">SEARCH  <span  class="glyphicon glyphicon-search"> </span>
+  <div id="demo" class="collapse">
+  <input type="text" name="search" placeholder="Search" style="float:right;color:black"> 
+</div>
+</button>
+<br>
+<br>
+                      <br>
                       <br>
                       <br>
                       <br>
@@ -163,7 +197,7 @@ label
                             <div class="col-sm-5">
                              <div class="jumbotron" style="align:center">
                            <div class="slider-text-bottom slider-text-middle5 text-left no-padding">
-                                <H2 class="slider-title-big5 white-text margin-eleven" style="font-family:Lucida Handwriting;text-align:center"><b>Welcome to Glorious Gifts</b></H2><br><br>
+                                <H2 class="slider-title-big5 white-text margin-eleven" style="font-family:Snap ITC;text-align:center">	Welcome to Glorious Gifts</H2><br><br>
                                 <p style="text-align:center;font-family:Comic Sans MS"> If you want to Surprise your Family and Friends with Amazing and Astonishing Gifts...then You Are on the right Place...<br>
                                 Glorious Gifts is a site where you can find all sort of gifts and cakes that you want to use to surprise your near and dear ones...
 
@@ -182,6 +216,8 @@ label
 
 
 </div>
+
+
 <script >
 	
 	$('.carousel').carousel();

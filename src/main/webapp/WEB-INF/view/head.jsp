@@ -45,7 +45,7 @@
      }
 
      .sidenav {
-    height: 100%;
+    height:  100%;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -112,7 +112,7 @@
  
  <li> <a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a></li>
  <li> <a href="signup">Sign Up<span class="glyphicons glyphicons-group"></span></a></li>
-  <li> <a href="signup">Admin<span class="glyphicon glyphicon-user" /></a></li>
+  <li> <a href="Admin">Admin<span class="glyphicon glyphicon-user" /></a></li>
   </ul>
  <br><br>
   </div>	

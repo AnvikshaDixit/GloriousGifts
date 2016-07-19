@@ -51,22 +51,13 @@ public class gloriousGiftController
 		return "index";
 	}
 	
-	
-	
-	
-
-	
-	@RequestMapping(value = "/signup", method = RequestMethod.GET)
-	   public ModelAndView Signupinfo()
+	 public ModelAndView Signupinfo()
 	   {
 		  ModelAndView mav = new ModelAndView("signup");
 	     mav.addObject("User",new User());
 	      return mav;
 	   }
-	
-	
-	
-	
+
 	@RequestMapping(value = "/Uservalues", method = RequestMethod.POST)
 	   public ModelAndView Uservalues (@Valid @ModelAttribute("User") User u,  BindingResult result ) 
 	   {
@@ -102,44 +93,45 @@ public class gloriousGiftController
 	      return mav;
 	   }
 	
-	
-	
-	
 	@RequestMapping(value = "/Productvalues", method = RequestMethod.POST)
 	   public ModelAndView Productvalues(@ModelAttribute("Product")Product p,HttpServletRequest request, BindingResult result) 
 	
-	   {String filename=null;
+	 {
+		String filename=null;
 
 	
 	ServletContext context= request.getServletContext();
 
-	String path = context.getRealPath("./resources/"+p.getProductID()+".jpg");
+	String path = context.getRealPath("/");
 
 	System.out.println("Path = "+path);
 
-	System.out.println("File name = "+p.getImage().getOriginalFilename());
+	p.setImage("resources/img/" + p.getFile().getOriginalFilename());
+	
+	System.out.println("File name = "+p.getFile().getOriginalFilename());
 
-	File f=new File(path);
+	File f=new File(path + "resources/img");
     
 	
 	
-	if(!p.getImage().isEmpty())
+	if(!p.getFile().isEmpty())
 
 	{
 
 	try
 
 	{
+		f =new File(f.getAbsoluteFile()+System.getProperty("file.separator")+ p.getFile().getOriginalFilename());
 
-	//filename=p.getImage().getOriginalFilename();
-
-	byte[] bytes=p.getImage().getBytes();
+	byte[] bytes=p.getFile().getBytes();
 
 	BufferedOutputStream bs=new BufferedOutputStream (new FileOutputStream(f));
 
 	bs.write(bytes);
 
 	bs.close();
+	
+	/*p.setFile("/resources/img/");*/
 
 	System.out.println("Image uploaded");
 	}
@@ -157,9 +149,9 @@ public class gloriousGiftController
       
  	  mav.addObject("Product",new Product());
       
-	  return mav;}
+	  return mav;
+	  }
    	
-	
 	
 	@RequestMapping(value = "/loginpage", method = RequestMethod.GET)
 	public ModelAndView logininfo(@RequestParam(value = "error", required = false) String error)
@@ -185,31 +177,7 @@ public class gloriousGiftController
 
 	}
 
-	
-	/*@RequestMapping(value = "/logincheck", method = RequestMethod.GET)
-	public String logincheck() {
-
-	   return "login";
-
-	}*/
-	
-	
-	
-	
-		
-	/*@RequestMapping("/login")
-	public String login()
-	{
-		return "login";
-	}*/
-	
-	
-	
-	
-	
-	
-	
-		
+			
 	@RequestMapping("/allproducts")
 	public ModelAndView allproducts()
 	{ 
@@ -277,6 +245,14 @@ public class gloriousGiftController
 		{
 		
   return "cartimg";
+
+	}
+		
+		@RequestMapping("/Admin")
+		public String  Admin()
+		{
+		
+  return "Admin";
 
 	}
 		

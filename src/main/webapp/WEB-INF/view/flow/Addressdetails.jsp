@@ -74,7 +74,7 @@ input {
 </div>
 <div class="col-sm-6 " style="backgroung-color:grey" >
  <div class="jumbotron">
-<h3 style="font-family:Tahoma ;text-align:center"><b><span class="glyphicon glyphicon-home" />PLEASE ENTER YOUR ADRESS DETAILS HERE</b> </h3><br> <br>
+<h3 style="font-family:Tahoma ;text-align:center"><b>PLEASE ENTER YOUR ADDRESS DETAILS HERE</b><br><span style="align:center" class="glyphicon glyphicon-home" /> </h3><br> <br>
 
 
 <form:form method="POST" action="Addressvalues" modelAttribute="Address">
@@ -123,10 +123,8 @@ input {
     <tr>
         <td colspan="2">
             <input type="submit" STYLE="color: #FFF8DC; font-family:Tahoma; background-color:#000000 ;" value="Submit"/>
-        </td>
-        
-       
-       
+        </td>       
+             
     </tr>
 </table>  
 </form:form>
