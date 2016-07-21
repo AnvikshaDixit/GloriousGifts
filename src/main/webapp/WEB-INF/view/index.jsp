@@ -1,4 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+																										<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!Doctype>
 <html>
 <meta charset="utf-8">
@@ -178,7 +178,7 @@ input[type=text]:focus {
                       <br>
  
   <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo" style="float: right">SEARCH  <span  class="glyphicon glyphicon-search"> </span>
-  <div id="demo" class="collapse">
+  <div id="demo" >
   <input type="text" name="search" placeholder="Search" style="float:right;color:black"> 
 </div>
 </button>
@@ -213,6 +213,7 @@ input[type=text]:focus {
                     
                 </div>
             </div>
+
 
 
 </div>

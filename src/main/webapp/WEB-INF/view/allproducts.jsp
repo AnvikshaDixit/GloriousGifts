@@ -87,7 +87,7 @@ th, td {
 	
    <br> <br>
     
-    <table border="6" text-align="center" class="table table-bordered " style=" border: 1px solid black;" > 
+    <table border="6" text-align="center" > 
       <thead style=" border: 1px solid black;">
       <tr style=" border: 1px solid black;">
       
@@ -100,10 +100,10 @@ th, td {
       </thead>
       <tbody>
       <tr  ng-repeat="product in products | filter:Searchtext " style=" border: 1px solid black;">
-      <td style=" border: 1px solid black;"><b>{{product.ProductName}}</b></td>
-      <td style=" border: 1px solid black;"><b>{{product.Price}}</b></td>
-        <td style=" border: 1px solid black;"><b>{{product.Manufacturer}}</b></td>
-      <td style=" border: 1px solid black;"><img data-ng-src="{{product.Image}}" class="img-responsive img-rounded" width="200" height="200" /></td>
+      <td ><b>{{product.ProductName}}</b></td>
+      <td ><b>{{product.Price}}</b></td>
+        <td "><b>{{product.Manufacturer}}</b></td>
+      <td ><img data-ng-src="{{product.Image}}" class="img-responsive img-rounded" width="200" height="200" /></td>
 
     </tr>
   </tbody>

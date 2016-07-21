@@ -14,7 +14,7 @@
 	<title>Login</title>
 
 	<link rel="stylesheet">
-	<%-- <jsp:include page="/WEB-INF/view/login.css"/> --%>
+	
 <style>
 
 @charset "utf-8";

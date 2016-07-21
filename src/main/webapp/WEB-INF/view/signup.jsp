@@ -76,10 +76,10 @@ input {
                       <br>
                       <br>            
 <div class="row">
-<div class="col-sm-3" style="backgroung-color:grey">
+<div class="col-sm-2" style="backgroung-color:grey">
 
 </div>
-<div class="col-sm-6 " style="backgroung-color:grey" >
+<div class="col-sm-8 " style="backgroung-color:grey" >
  <div class="jumbotron">
 <h2 style="font-family:Tahoma ;text-align:center"><b><span class="glyphicon glyphicon-user" />PLEASE SIGN UP</b> </h2><br> <br>
 <h5 style="font-family:Tahoma,text-align:center"><b>PLEASE ENTER THE USER DETAILS</b></h5>

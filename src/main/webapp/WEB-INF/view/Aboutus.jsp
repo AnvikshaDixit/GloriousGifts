@@ -11,6 +11,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>About Us</title>
+
 <style>
  
 body {
@@ -42,6 +43,52 @@ body {
                       <br>
                       <br>
                       <br>
+                       <div class="row ">
+          <div class="col-sm-4" >
+          </div>
+           <div class="col-sm-4" >
+                      <h2 Style="text-align:center;font-family:Segoe Script;" class="jumbotron" ><b>About Us</b></h2>
+             </div>
+             <div class="col-sm-4" >
+             </div>
+             </div>  
+             <br>
+             <br>
+             <div class="row ">
+          <div class="col-sm-1" >
+          </div>
+          <div class="col-sm-5" >
+                       
+            <video  autoplay controls loop style="align:center;" width =100% height=100%>
+       <source src="resources/video/v1.mp4" type="video/mp4">
+      <source src="resources/video/v1.ogg" type="video/ogg">
+         Your browser does not support the video tag.
+            </video>
+                </div>
+                <div class="col-sm-5 " Style="text-align:center;font-family:Comic Sans MS;">
+                <div class="jumbotron">
+                It isn't the size of the gift that matters, but the size of the heart that gives it. <br>
+                 <i>~Quoted in The Angels' Little Instruction Book by Eileen Elias Freeman, 1994</i>
+                  
+                 </div> 
+                 
+                 <br>
+                 <div class="jumbotron">
+                 
+                 <h4>Hello Everyone,</h4> <br>
+                 We the Glorious Gift people welcome You!!!<br>
+                 Glorious gift is a site Where you can find all sort of gifts For different age of people..
+                 The main motive of glorious gifts is to make your family and friends Happy with the amazing and creative Gifts , when you would not be present at there special occcasion..
+                 <br>
+                 This site was developed in 2015...And till now around 1,00,000 people have joined with us....
+                 If you have not Signed Up yet the Sign Up with U today and be the part of Glorious Gifts....
+                 </div>
+                  
+                     
+                     
+                     </div>
+                     </div>
+                     
                       </div>
 
 </body>

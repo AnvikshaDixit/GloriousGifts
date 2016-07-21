@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,7 @@
 <script src="resources/js/jquery.min.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <style>
 
@@ -41,7 +42,7 @@
     margin:5px; 
     padding:0 px;
     color:white;
-     background-color: rgba(5,4,2,0.5);
+     background-color: rgba(5,4,2,0.8);
      }
 
      .sidenav {
@@ -87,6 +88,10 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+h3
+{ color:#ffffff;
+}
 </style>
 
 
@@ -95,28 +100,62 @@
  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
    <ul class="mainmenu">
-  <li><a href="index">Home<span class="glyphicon glyphicon-home" /></a>
- <li> <a href="Aboutus">About Us<span class="glyphicon glyphicon-pencil" /></a></li>
- <li> <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
+   <c:if test="${pageContext.request.userPrincipal.name != null}">
+			<a href="#"><h4>Hello : ${pageContext.request.userPrincipal.name}</h4> </a>
+			
+		</c:if>
+  <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
+  <a href="Aboutus">About Us<span class="glyphicon glyphicon-pencil" /></a>
+   
+  
+  <li> <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
   <ul class="submenu">
         <li><a href="cartimg">Cakes</a></li>
         <li><a href="">Flowers</a></li>
         <li><a href="">Gifts</a></li>
-      </ul></li>
- <li> <a href="#">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a></li>
-  <br>
-  <li> <a href="product">Product Entry<span class="glyphicon glyphicon-hdd" /></a></li>
-  <br>
+      </ul>
+     
+ <a href="ContactUs">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
+  <c:if test="${pageContext.request.userPrincipal.name != null}">
+			 <a href="product">Product Entry<span class="glyphicon glyphicon-hdd" /></a>
+			</h3>
+		</c:if>
+ <br>
+ <br>
   
-  <br>
- 
- <li> <a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a></li>
- <li> <a href="signup">Sign Up<span class="glyphicons glyphicons-group"></span></a></li>
-  <li> <a href="Admin">Admin<span class="glyphicon glyphicon-user" /></a></li>
+		
+			<a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a>
+             <a href="signup">Sign Up<span class="glyphicons glyphicons-group"></span></a>
+  
+			</h3>
+		
+  <sec:authorize access="hasRole('USER')">
+		<!-- For login user -->
+		<c:url value="/logout" var="logoutUrl" />
+		<form action="${logoutUrl}" method="post" id="logoutForm">
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+		</form>
+		<script>
+			function formSubmit() {
+				document.getElementById("logoutForm").submit();
+			}
+		</script>
+
+		<c:if test="${pageContext.request.userPrincipal.name != null}">
+			<a href="javascript:formSubmit()"> Logout</a>
+			<a href="Admin">Admin<span class="glyphicon glyphicon-user" /></a>
+			</h3>
+		</c:if>
+	</sec:authorize>
   </ul>
  <br><br>
   </div>	
-
+  
+  
+  
+  
+  
 </body>
 <script>
 function openNav() {

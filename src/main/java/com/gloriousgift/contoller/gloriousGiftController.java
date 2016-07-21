@@ -51,6 +51,7 @@ public class gloriousGiftController
 		return "index";
 	}
 	
+	@RequestMapping("/signup")
 	 public ModelAndView Signupinfo()
 	   {
 		  ModelAndView mav = new ModelAndView("signup");
@@ -245,6 +246,14 @@ public class gloriousGiftController
 		{
 		
   return "cartimg";
+
+	}
+		
+		@RequestMapping("/ContactUs")
+		public String  contactus()
+		{
+		
+  return "ContactUs";
 
 	}
 		
