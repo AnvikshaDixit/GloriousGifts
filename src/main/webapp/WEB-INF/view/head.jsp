@@ -117,7 +117,7 @@ h3
      
  <a href="ContactUs">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
   <c:if test="${pageContext.request.userPrincipal.name != null}">
-			 <a href="product">Product Entry<span class="glyphicon glyphicon-hdd" /></a>
+			<!--  <a href="product">Product Entry<span class="glyphicon glyphicon-hdd" /></a> -->
 			</h3>
 		</c:if>
  <br>

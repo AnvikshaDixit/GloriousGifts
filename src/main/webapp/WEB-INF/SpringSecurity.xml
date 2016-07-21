@@ -17,6 +17,8 @@
     
     <security:http auto-config="true">
         <!-- Restrict URLs based on role -->
+       <!--  <security:intercept-url pattern="/Admin**" access="hasRole('ADMIN')" /> -->
+        
         <security:intercept-url pattern="/**" access="permitAll or hasRole('USER') or hasRole('ADMIN')" />
         
         <security:intercept-url pattern="/flows/createItem" access="permitAll" method="POST" />
