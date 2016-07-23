@@ -3,9 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="resources/css/bootstrap.min.css">
-<script src="resources/js/jquery.min.js"></script>
-<script src="resources/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -104,29 +104,31 @@ h3
 			<a href="#"><h4>Hello : ${pageContext.request.userPrincipal.name}</h4> </a>
 			
 		</c:if>
-  <a href="index">Home<span class="glyphicon glyphicon-home" /></a>
-  <a href="Aboutus">About Us<span class="glyphicon glyphicon-pencil" /></a>
+  <a href="${pageContext.request.contextPath}/index">Home<span class="glyphicon glyphicon-home" /></a>
+  <a href="${pageContext.request.contextPath}/Aboutus">About Us<span class="glyphicon glyphicon-pencil" /></a>
    
   
-  <li> <a href="allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
+  <li> <a href="${pageContext.request.contextPath}/allproducts">Products<span class="glyphicon glyphicon-gift" /></a>
   <ul class="submenu">
-        <li><a href="cartimg">Cakes</a></li>
-        <li><a href="">Flowers</a></li>
-        <li><a href="">Gifts</a></li>
+        <li><a href="${pageContext.request.contextPath}/allproducts1">Cakes</a></li>
+        <li><a href="${pageContext.request.contextPath}/allproducts2">Flowers</a></li>
+        <li><a href="${pageContext.request.contextPath}/allproducts3">Gifts</a></li>
       </ul>
      
  <a href="ContactUs">Contact Us<span class="glyphicon glyphicon-phone-alt" /></a>
   <c:if test="${pageContext.request.userPrincipal.name != null}">
-			<!--  <a href="product">Product Entry<span class="glyphicon glyphicon-hdd" /></a> -->
+			
 			</h3>
 		</c:if>
  <br>
  <br>
-  
-		
+ <c:choose>
+    <c:when test="${empty pageContext.request.userPrincipal}">
 			<a href="loginpage">Login<span class="glyphicon glyphicon-log-in" /></a>
              <a href="signup">Sign Up<span class="glyphicons glyphicons-group"></span></a>
-  
+  </c:when>
+  </c:choose>
+		
 			</h3>
 		
   <sec:authorize access="hasRole('USER')">
@@ -143,7 +145,7 @@ h3
 		</script>
 
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
-			<a href="javascript:formSubmit()"> Logout</a>
+			<a href="javascript:formSubmit()"> Logout<span class="glyphicon glyphicon-log-out" /></a>
 			<a href="Admin">Admin<span class="glyphicon glyphicon-user" /></a>
 			</h3>
 		</c:if>

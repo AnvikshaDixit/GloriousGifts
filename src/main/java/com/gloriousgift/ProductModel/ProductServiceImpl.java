@@ -23,5 +23,14 @@ public class ProductServiceImpl implements ProductService
 		return pdao.list();
 	}
 
+	 @Transactional
+		public void delete (int p) {
+			pdao.delete(p);
+		}
+
+	    @Transactional
+		public void updateItem(Product p) {
+			pdao.updateItem(p);
+		}
 	
 }

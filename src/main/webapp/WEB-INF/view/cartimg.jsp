@@ -1,13 +1,33 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false" %>
 <html>
 <head>
-<title>Handmade Doll</title>
+<title>Details</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width , initial-state=1"/>
-  <link rel="stylesheet" href="resources/css/bootstrap.min.css">
-   <script src="resources/js/jquery.min.js"></script>
-  <script src="resources/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+   <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+  <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+  <script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
 <jsp:include page="/WEB-INF/view/head.jsp"/>
+
+<script>
+
+	var myApp= angular.module('mymodule',[]);
+	
+	myApp.controller("mycontroller",function($scope) {
+	   
+	   var products=${dataValue};
+	  
+	   $scope.product= products;
+   
+      
+});
+
+</script>
 <style>
 .deal {
   float: left;
@@ -21,7 +41,7 @@
    body {text-align:center;
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
-     background: url(resources/img/b1.jpg) no-repeat center center fixed; 
+     background: url(${pageContext.request.contextPath}/resources/img/b1.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,7 +71,9 @@
 }
 </style>
 </head>
-<body >
+<body  ng-app="mymodule" >
+
+<div data-ng-controller="mycontroller">
 <div class="container" id="product-section">
 <div class="title" id="main">
 
@@ -72,7 +94,8 @@
   <div class="row">
     <div class="col-sm-6">
    <div class="col-sm-12">
- <h1 style="font-family:Segoe Script">Chumbak-Handmade Doll</h1>
+    <div style=" border: 1px solid black;">
+ <h1 style="font-family:Segoe Script">{{product.ProductName}}</h1>
     </div>
     <div class="row">
  <div class="col-sm-12">
@@ -84,7 +107,7 @@
 <div class="row">
  <div class="col-sm-12">
   <p class="description">
- HANDMADE DOLL-CHUMBAK
+Description
   </p>
  
 </div>
@@ -109,7 +132,7 @@
  </li>
  
  <br>
-  <h2 class="product-price"><b>Rs.900</b></h2>
+  <h2 class="product-price"><b>{{product.Price}}</b></h2>
  </div>
  
  <div class="col-md-3">
@@ -154,18 +177,19 @@
 <div class="row">
  <div class="col-md-12 bottom-rule top-10"></div>
 </div><!-- end row -->
- 
+</div>
 </div>
 <div class="col-sm-6" style="align:right">
 <div class="dropdown">
-    <img src="<c:url value='resources/img/g4.jpg'/>"    height="70%" width = "70%" alt="WESTERN DRESS"   class="img-responsive img-rounded"/>
+    <img  src="${pageContext.request.contextPath}/{{product.Image}}" height="90%" width = "90%" alt="Gifts"  class="img-responsive img-rounded"/>
   <div class="dropdown-content">
-  <img src="<c:url value='resources/img/g4.jpg'/>"  height="1000" width = "1000" alt="WESTERN DRESS"   class="img-responsive img-rounded"/>
+  <img data-ng-src="${pageContext.request.contextPath}/{{product.Image}}"  height="1000" width = "1000" alt="Gifts"  class="img-responsive img-rounded"/>
   <div class="desc" style="color:black">Have a closer look to the image</div>
   </div>
 </div>
    </div>
 
+ </div>
  </div>
  
   <!-- Nav tabs -->
@@ -203,6 +227,7 @@
    WALKINSTYLE
   </small>
  </p>
+ </div>
  </div>
  </div><!-- end container -->
   </body>

@@ -9,7 +9,8 @@
 <script src="resources/js/angular.min.js"></script>
 <jsp:include page="/WEB-INF/view/head.jsp"/>
 
-<title>All products</title>
+<title>Details Summary</title>
+
 
 
 <style>
@@ -52,20 +53,7 @@ th, td {
 
 </head>
 
-<script>
 
-	var myApp= angular.module('mymodule',[]);
-	
-	myApp.controller("mycontroller",function($scope) {
-	   
-	   var products=${JSONdata};
-	  
-	   $scope.products= products;
-   
-      
-});
-
-</script>
 
 
 <body ng-app="mymodule" >
@@ -82,39 +70,15 @@ th, td {
    </div>                      <br>
                       <br>
                       <br>
-  <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo" style="align:center;font-family:Comic Sans MS">SEARCH  <span  class="glyphicon glyphicon-search"> </span>
-     <div id="demo" >
-                     
-         <h4> <input type="text" placeholder="Search Product" ng-model="Searchtext" ng-init="Searchtext=''" /></h4>
-
-     </div>
-</button>	
-   <br> 
-   <br>
-   <br>
-    
-    <table border="6" text-align="center" > 
-      <thead style=" border: 1px solid black;">
-      <tr style=" border: 1px solid black;">
-      
-      <th style=" border: 1px solid black; background-color:#C70039  ;"><h3><b> Product Name </b></h3></th>
-      <th style=" border: 1px solid black; background-color: #C70039  ;"><h3><b>Price</b></h3>  </th>
-      <th style=" border: 1px solid black;  background-color: #C70039  ;"><h3><b>Product Manufacturer</b></h3> </th>
-      <th style=" border: 1px solid black; background-color: #C70039  ;"><h3><b> Product image </b></h3></th>
-      <th style=" border: 1px solid black; background-color: #C70039  ;"><h3><b> Product Details </b></h3></th>
-      
-            </tr>
-      </thead>
-      <tbody>
-      <tr  ng-repeat="product in products | filter:Searchtext " style=" border: 1px solid black;">
-      <td ><b>{{product.ProductName}}</b></td>
-      <td ><b>{{product.Price}}</b></td>
-        <td ><b>{{product.Manufacturer}}</b></td>
-      <td ><img data-ng-src="{{product.Image}}" class="img-responsive img-rounded" width="200" height="200" /></td>
-<td ><a href="cartimgnew/{{product.ProductID}}" class="btn btn-primary">View</a></td> </tr>
-  </tbody>
-</table>
-</div>
+                      <div class="jumbotron" style="white">
+<h1> Address Details</h1>
+$ {address.houseno}
+${address.address1}
+${address. address2}
+${address. city}
+${address. state}
+${address. country}
+${address. zipcode}
 </div>
 </div>
 

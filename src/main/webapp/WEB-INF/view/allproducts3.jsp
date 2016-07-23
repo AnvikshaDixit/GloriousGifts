@@ -85,7 +85,7 @@ th, td {
   <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo" style="align:center;font-family:Comic Sans MS">SEARCH  <span  class="glyphicon glyphicon-search"> </span>
      <div id="demo" >
                      
-         <h4> <input type="text" placeholder="Search Product" ng-model="Searchtext" ng-init="Searchtext=''" /></h4>
+         <h4> <input type="text" placeholder="Search Product" ng-model="Searchtext" ng-init="Searchtext='Gift'" /></h4>
 
      </div>
 </button>	
@@ -102,7 +102,6 @@ th, td {
       <th style=" border: 1px solid black;  background-color: #C70039  ;"><h3><b>Product Manufacturer</b></h3> </th>
       <th style=" border: 1px solid black; background-color: #C70039  ;"><h3><b> Product image </b></h3></th>
       <th style=" border: 1px solid black; background-color: #C70039  ;"><h3><b> Product Details </b></h3></th>
-      
             </tr>
       </thead>
       <tbody>

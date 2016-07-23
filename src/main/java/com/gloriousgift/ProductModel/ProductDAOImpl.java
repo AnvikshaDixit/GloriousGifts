@@ -29,5 +29,15 @@ public class ProductDAOImpl implements ProductDAO
 		sessionFactory.getCurrentSession().delete(p);
 		
 	}
+
+	public void delete(int p) {
+		sessionFactory.getCurrentSession().createQuery("delete from Product as p where p.ProductID = :id").setInteger("id", p).executeUpdate();
+		
+	}
+
+	public void updateItem(Product p) {
+		sessionFactory.getCurrentSession().update(p);
+		
+	}
  
 }

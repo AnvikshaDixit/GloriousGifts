@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -78,7 +79,7 @@ public class gloriousGiftController
 		  
 			 us.insert(u);
 	    		  
-		     ModelAndView mav = new ModelAndView("Success");
+		     ModelAndView mav = new ModelAndView("login");
 	      
 		     mav.addObject("User",new User());
 	      
@@ -219,6 +220,89 @@ public class gloriousGiftController
   
 	}
 	
+	@RequestMapping("/allproducts1")
+	public ModelAndView allproducts1()
+	{ 
+		List<Product> list = ps.list();
+		
+		String temp = "[";
+		
+		for( Product p:list )
+		{
+			temp += p.toString().replaceAll("\\\\", "/") + ",";
+		}
+		
+		if( temp.length() > 1 )
+			temp = temp.substring(0, temp.length()-1);
+		
+		temp+= "]";
+		
+		System.out.println(temp);
+		 
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("JSONdata", temp);
+		
+		return mav;
+
+  
+	}
+	
+	@RequestMapping("/allproducts2")
+	public ModelAndView allproducts2()
+	{ 
+		List<Product> list = ps.list();
+		
+		String temp = "[";
+		
+		for( Product p:list )
+		{
+			temp += p.toString().replaceAll("\\\\", "/") + ",";
+		}
+		
+		if( temp.length() > 1 )
+			temp = temp.substring(0, temp.length()-1);
+		
+		temp+= "]";
+		
+		System.out.println(temp);
+		 
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("JSONdata", temp);
+		
+		return mav;
+
+  
+	}
+	@RequestMapping("/allproducts3")
+	public ModelAndView allproducts3()
+	{ 
+		List<Product> list = ps.list();
+		
+		String temp = "[";
+		
+		for( Product p:list )
+		{
+			temp += p.toString().replaceAll("\\\\", "/") + ",";
+		}
+		
+		if( temp.length() > 1 )
+			temp = temp.substring(0, temp.length()-1);
+		
+		temp+= "]";
+		
+		System.out.println(temp);
+		 
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("JSONdata", temp);
+		
+		return mav;
+
+  
+	}
+	
 	
 	
 
@@ -253,13 +337,23 @@ public class gloriousGiftController
 	
 	
 	
-		@RequestMapping("/cartimg")
-		public String  cart()
+		@RequestMapping("/cartimgnew/{id}")
+		public ModelAndView cart(@PathVariable("id") int id)
 		{
+			List<Product> prs = ps.list();
 		
-  return "cartimg";
-
-	}
+			ModelAndView mav = new ModelAndView("cartimg");
+			
+			for( Product p : prs )
+			{
+				if(p.getProductID() == id )
+				{
+					mav.addObject("dataValue", p.toString());
+				}
+			}
+			
+			return mav;
+		}
 		
 		@RequestMapping("/ContactUs")
 		public String  contactus()
@@ -323,9 +417,4 @@ public class gloriousGiftController
 					
 			
 		  }
-		
-		
-		
-		
-		
 }

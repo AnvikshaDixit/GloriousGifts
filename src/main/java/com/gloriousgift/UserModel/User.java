@@ -90,7 +90,7 @@ public class User implements Serializable
 		Address = address;
 	}
 	
-	@Length(max=10,min=10,message="Phone number is not valid. Should be of length having 10 numbers. ")
+	@Length(max=10,min=10,message="Phone number is not valid.  ")
 	@NotEmpty(message="Phone Filed is Mandatory")
 	
 	public String getPhone() {

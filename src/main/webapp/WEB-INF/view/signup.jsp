@@ -76,11 +76,11 @@ input {
                       <br>
                       <br>            
 <div class="row">
-<div class="col-sm-2" style="backgroung-color:grey">
+<div class="col-sm-3" style="backgroung-color:grey">
 
 </div>
-<div class="col-sm-8 " style="backgroung-color:grey" >
- <div class="jumbotron">
+<div class="col-sm-6  jumbotron" style="backgroung-color:grey;align:center"  >
+
 <h2 style="font-family:Tahoma ;text-align:center"><b><span class="glyphicon glyphicon-user" />PLEASE SIGN UP</b> </h2><br> <br>
 <h5 style="font-family:Tahoma,text-align:center"><b>PLEASE ENTER THE USER DETAILS</b></h5>
 
@@ -104,7 +104,7 @@ input {
     
      <tr>
         <td><form:label path="cPassword" style=" font-family:Tahoma;">CONFIRM-PASSWORD</form:label></td>
-        <td><form:input path="cPassword" STYLE="color: #000000; font-family:Tahoma; " /><br><br></td>
+        <td><form:input path="cPassword" type="password" STYLE="color: #000000; font-family:Tahoma; " /><br><br></td>
         <td><form:errors path="cPassword" class="err" /></td>
     </tr>
     
@@ -131,7 +131,6 @@ input {
 </div>
 </div>
 <div class="col-sm-3">
-</div>
 
 </div>
 </div>
